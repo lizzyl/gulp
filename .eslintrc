@@ -1,0 +1,17 @@
+{
+  "extends": "eslint:recommended",
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+
+    "comma-dangle": ["error", "never"],
+    "no-cond-assign": ["error", "always"],
+
+    "no-console": "warn"
+  },
+  "globals": {
+    "console": true
+  }
+}
