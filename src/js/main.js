@@ -90,7 +90,7 @@ axios.get('./data/test.json')
           if (isWechat() || isWeibo()) {
             this.show = true;
           } else {
-            window.location.replace(channel.content.download.iosUrl);
+          window.location.replace(channel.content.download.iosUrl);
             // this.iosUrl = channel.content.download.iosUrl;
           }
           window._hmt.push(['_trackEvent', 'software', 'iosClick', 'ttplayer']);
