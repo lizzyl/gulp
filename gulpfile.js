@@ -16,7 +16,7 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   paths = {
     html: {
-      all: './src/*.html',
+      all: ['./src/*.html'],
       clean: './public/*.html',
       dest: './public/'
     },
@@ -48,7 +48,7 @@ var gulp = require('gulp'),
       dest: './public/img/'
     },
     icon: {
-      all: ['./src/*.png', './src/*.ico'],
+      all: './src/*.*',
       clean: ['./public/*.png', './public/*.ico'],
       dest: './public/'
     }

@@ -104,7 +104,7 @@ axios.get('./data/test.json')
     return downloadUrl;
   })
   .then(function(downloadUrl) {
-    _digger_ = {
+    var _digger_ = {
       disablePageViewTrack: false,
       trackerUrlMap: {
         pageView: ['//bicollect.hulai.com:8182/api'],
@@ -143,8 +143,8 @@ axios.get('./data/test.json')
       }]
     };
     return _digger_;
-  }).then(function(_digger) {
-    digger(_digger);
+  }).then(function(_digger_) {
+    digger(_digger_);
   }).catch(function() {
     // var el = document.getElementsByClassName('message');
     // el.parentNode.replaceChild('<>')
