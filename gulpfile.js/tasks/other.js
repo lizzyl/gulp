@@ -2,7 +2,7 @@ var gulp = require('gulp'),
   changed = require('gulp-changed'),
   imagemin = require('gulp-imagemin'),
   clean = require('gulp-clean'),
-  connect = require('gulp-connect'),
+  // connect = require('gulp-connect'),
   paths = require('../config.js');
 
 gulp.task('clean-other', function() {
@@ -17,5 +17,5 @@ gulp.task('other', ['clean-other'], function() {
     .pipe(changed(paths.other.dest))
     .pipe(imagemin())
     .pipe(gulp.dest(paths.other.dest))
-    .pipe(connect.reload());
+    // .pipe(connect.reload());
 });

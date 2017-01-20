@@ -5,7 +5,7 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename'),
-  connect = require('gulp-connect'),
+  // connect = require('gulp-connect'),
   eslint = require('gulp-eslint'),
   plumber = require('gulp-plumber'),
   paths = require('../config.js');
@@ -36,5 +36,5 @@ gulp.task('bundlejs', ['clean-js'], function() {
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.js.dest))
-    .pipe(connect.reload());
+    // .pipe(connect.reload());
 });

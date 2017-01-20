@@ -11,6 +11,13 @@
 > $ git clone ssh://git@192.168.1.169:10022/webteam/leangulp.git
 ```
 
+全局安装gulp-cli (全局安装gulp vs gulp-cli详情见https://teamtreehouse.com/community/gulp-global-install-gulp-vs-gulpcli)
+
+```
+> $ npm install --global gulp-cli
+```
+
+
 进入文件目录下安装依赖包
 
 ```

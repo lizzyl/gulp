@@ -1,11 +1,11 @@
 module.exports = {
   html: {
-    all: ['./src/*.html'],
+    all: ['src/*.html'],
     clean: './public/*.html',
     dest: './public/'
   },
   css: {
-    all: './src/css/*.css',
+    all: 'src/css/*.css',
     clean: './public/css/',
     dest: './public/css/'
   },
@@ -17,17 +17,17 @@ module.exports = {
     dest: './public/js/'
   },
   jsonData: {
-    all: './src/data/*.json',
+    all: 'src/data/*.json',
     clean: './public/data/*.json',
     dest: './public/data/'
   },
   img: {
-    all: ['./src/img/*.png', './src/img/*.jpg', './src/img/*.jpeg', './src/img/*.gif'],
+    all: ['src/img/*.png', 'src/img/*.jpg', 'src/img/*.jpeg', 'src/img/*.gif'],
     clean: './public/img/',
     dest: './public/img/'
   },
   other: {
-    all: ['./src/*.*', '!./src/*.html'],
+    all: ['src/*.*', '!src/*.html'],
     clean: ['./public/*.*', '!./public/*.html'],
     dest: './public/'
   }

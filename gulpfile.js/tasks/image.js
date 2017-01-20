@@ -2,7 +2,7 @@ var gulp = require('gulp'),
   changed = require('gulp-changed'),
   imagemin = require('gulp-imagemin'),
   clean = require('gulp-clean'),
-  connect = require('gulp-connect'),
+  // connect = require('gulp-connect'),
   paths = require('../config.js');
 
 
@@ -18,5 +18,5 @@ gulp.task('img', ['clean-img'], function() {
     .pipe(changed(paths.img.dest))
     .pipe(imagemin())
     .pipe(gulp.dest(paths.img.dest))
-    .pipe(connect.reload());
+    // .pipe(connect.reload());
 });

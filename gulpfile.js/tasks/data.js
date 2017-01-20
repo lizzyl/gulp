@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
   clean = require('gulp-clean'),
-  connect = require('gulp-connect'),
+  // connect = require('gulp-connect'),
   paths = require('../config.js');
 
 
@@ -12,5 +12,5 @@ gulp.task('clean-jsonData', function() {
 gulp.task('data', ['clean-jsonData'], function() {
   return gulp.src(paths.jsonData.all)
     .pipe(gulp.dest(paths.jsonData.dest))
-    .pipe(connect.reload());
+    // .pipe(connect.reload());
 });
