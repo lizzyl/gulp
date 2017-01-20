@@ -12,6 +12,11 @@
     "no-console": "warn"
   },
   "globals": {
-    "console": true
+    "$": true,
+    "axios": true,
+    "Vue": true
+  },
+  "env": {
+    "browser": true
   }
 }
