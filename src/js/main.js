@@ -30,13 +30,13 @@ var searchParams = new URLSearchParams(window.location.search.slice(1));
 
 
 /* get channel info */
-axios.get('./data/test.json')
+axios.get('./data/data.json')
   .then(function(response) {
     return response.data;
   }).then(function(data) {
-    var json = eval('(' + data + ')');
+    // var json = eval('(' + data + ')');
     // var json = JSON.parse(JSON.stringify(data))
-    return json.channels;
+    return data.channels;
   }).then(function(channels) {
     var downloadUrl;
     var channelId = searchParams.get('channel');
@@ -47,15 +47,21 @@ axios.get('./data/test.json')
 
         /*-------------这里取得是安卓下载地址，如果是ios 请取值为channel.content.download.iosUrl------------------*/
         downloadUrl = channel.content.download.androidUrl;
+        break;
 
-        // console.log('downloadurl: ')
-        // console.log(channel.content.download.androidUrl)
       }
     }
 
     // eslint-disable-next-line no-unused-vars
+    var appHead = new Vue({
+      el: 'head',
+      data: {
+        head: channel.head
+      }
+    });
+    // eslint-disable-next-line no-unused-vars
     var app = new Vue({
-      el: 'html',
+      el: '.wrap',
       data: {
         channel: channel,
         show: false,
@@ -134,7 +140,7 @@ axios.get('./data/test.json')
       },
       eventConfigArr: [{
         eventType: 'click',
-        selectors: ["a[id='android']"],
+        selectors: ['a[id="android"]'],
         extendParams: {
           event_flag: 'downloadClick',
           act: 'click',

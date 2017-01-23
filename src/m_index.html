@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title v-cloak v-text="channel.head.title"></title>
+    <title v-cloak v-text="head.title"></title>
     <!-- 重要：标题改这里 -->
-    <meta name="keywords" :content="channel.head.meta.keywords">
-    <meta name="description" :content="channel.head.meta.description">
-    <meta name="author" :content="channel.head.meta.author">
+    <meta name="keywords" :content="head.meta.keywords">
+    <meta name="description" :content="head.meta.description">
+    <meta name="author" :content="head.meta.author">
     <meta name="renderer" content="webkit">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=640,target-densitydpi=320, minimum-scale=0.5, maximum-scale=2,user-scalable=0">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" :href="channel.head.favicon">
+    <link rel="shortcut icon" type="image/x-icon" :href="head.favicon">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="./css/bundle.min.css">
 </head>
@@ -34,7 +34,7 @@
             </div>
         </div> -->
         <div class="discuss">
-            <div v-cloak class="discuss-sec" v-for="comment in channel.content.comment">
+            <div v-cloak class="discuss-sec" v-for="comment in channel.content.comments">
                 <img class="touxiang" :src="comment.touxiangIcon" alt="touxiang">
                 <div class="info">
                     <span class="name">{{comment.name}}</span>

@@ -26,6 +26,11 @@ module.exports = {
     clean: './public/img/',
     dest: './public/img/'
   },
+  photo: {
+    all: ['src/photo/*.png', 'src/photo/*.jpg', 'src/photo/*.jpeg', 'src/photo/*.gif'],
+    clean: './public/photo/',
+    dest: './public/photo/'
+  },
   other: {
     all: ['src/*.*', '!src/*.html'],
     clean: ['./public/*.*', '!./public/*.html'],
